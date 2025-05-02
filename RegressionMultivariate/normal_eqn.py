@@ -4,7 +4,7 @@
 @brief Calcula os parâmetros θ usando a Equação Normal.
 @details Este módulo contém uma função para calcular os parâmetros de um modelo
           de regressão linear utilizando a equação normal.
-@author Your Name <your.email@example.com>
+@author Diogo Brasil Da Silva <diogobrasildasilva@gmail.com>
 """
 
 import numpy as np
@@ -30,4 +30,4 @@ def normal_eqn(X, y):
     # ou não é invertível.
     # A pseudo-inversa é uma generalização da inversa de uma matriz e pode ser usada para resolver
     # sistemas de equações lineares que não têm uma solução única ou que são mal condicionados.
-    return 
+    return np.linalg.pinv(X.T @ X) @ X.T @ y
