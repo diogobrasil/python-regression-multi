@@ -223,7 +223,7 @@ def main():
     theta_gd, J_history, theta_history = gradient_descent_multi_with_history(X_b, y, np.zeros(X_b.shape[1]), alpha, num_iters)
     theta_ne_norm = np.zeros_like(theta_ne)
     theta_ne_norm[1:] = sigma * theta_ne[1:]
-    theta_ne_norm[0] = theta_ne[0] - np.sum(mu * theta_ne[1:])
+    theta_ne_norm[0] = theta_ne[0] + np.sum(mu * theta_ne[1:])
 
     # ------------------------------------------------------------------
     # 7) Contorno J(θ1, θ2) (θ0 fixo em θ_gd[0]). Malha de custo centrada no ótimo
