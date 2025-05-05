@@ -1,6 +1,6 @@
-# regressao-multivariada-ex.py
+# regressao-multivariada-std-norm.py
 """
-@file regressao-multivariada-ex.py
+@file regressao-multivariada-std-norm.py
 @brief Multivariate linear regression exercise with gradient descent and normal equation.
 @details Este script executa um fluxo de trabalho completo para regressão linear multivariada,
           incluindo normalização de features, cálculo de parâmetros via gradiente descendente
@@ -51,7 +51,7 @@ def main():
 
     """
     # 1) Cria pasta de figuras
-    os.makedirs("Figures", exist_ok=True)
+    os.makedirs("Figures/std/", exist_ok=True)
 
     # 2) Carrega dados
     data = np.loadtxt('Data/ex1data2.txt', delimiter=',')
@@ -131,8 +131,8 @@ def main():
     plt.ylabel('Custo J(θ)')
     plt.title('Convergência do Gradiente (Multivariada)')
     plt.grid(True)
-    plt.savefig('Figures/convergencia_custo_multi.png', dpi=300, bbox_inches='tight')
-    plt.savefig('Figures/convergencia_custo_multi.svg', format='svg', bbox_inches='tight')
+    plt.savefig('Figures/std/std_convergencia_custo_multi.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Figures/std/std_convergencia_custo_multi.svg', format='svg', bbox_inches='tight')
     plt.show()
 
     # 5) Predição com GD
@@ -211,8 +211,8 @@ def main():
     plt.title('GD vs Normal Equation')
     plt.legend()
     plt.grid(True)
-    plt.savefig('Figures/convergencia_custo_vs_ne.png', dpi=300, bbox_inches='tight')
-    plt.savefig('Figures/convergencia_custo_vs_ne.svg', format='svg', bbox_inches='tight')
+    plt.savefig('Figures/std/std_convergencia_custo_vs_ne.png', dpi=300, bbox_inches='tight')
+    plt.savefig('Figures/std/std_convergencia_custo_vs_ne.svg', format='svg', bbox_inches='tight')
     plt.show()
 
     # -------------- Visualizações 3D / Contorno para multivariada ----------------------------
@@ -254,7 +254,7 @@ def main():
     ax.set_title("Superfície J(θ1, θ2)")
     ax.view_init(elev=30, azim=-60)
     ax.legend()
-    fig.savefig("Figures/superficie_GD_vs_NE.png", dpi=300)
+    fig.savefig("Figures/std/std_superficie_GD_vs_NE.png", dpi=300)
 
     # --------------------------------------------------------------
     # 8a) Contorno J(θ1, θ2) + trajetória GD + NE (normalizado)
@@ -268,7 +268,7 @@ def main():
     plt.scatter(theta_ne_norm[1], theta_ne_norm[2], s=80, marker="x", color="black", label="NE (norm)")
     plt.xlabel(r"$\theta_1$"); plt.ylabel(r"$\theta_2$")
     plt.title("Contorno J(θ1, θ2)"); plt.legend()
-    plt.savefig("Figures/contorno_GD_vs_NE.png", dpi=300)
+    plt.savefig("Figures/std/std_contorno_GD_vs_NE.png", dpi=300)
     plt.show()
 
     # ------------------------------------------------------------------
@@ -310,7 +310,7 @@ def main():
     ]
     ax2.legend(handles=handles)
     fig2.tight_layout()
-    fig2.savefig("Figures/ajuste_regressao_multivariada.png", dpi=300)
+    fig2.savefig("Figures/std/std_ajuste_regressao_multivariada.png", dpi=300)
     plt.show()
 
 if __name__ == '__main__':
