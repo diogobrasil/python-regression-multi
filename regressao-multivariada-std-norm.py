@@ -103,7 +103,7 @@ def main():
 
     # 4) Gradient Descent Multivariado
     alpha = 0.01
-    num_iters = 400
+    num_iters = 4000
     # Inicialize theta com zeros (tamanho n+1, onde n é o número de features)
     # O vetor theta terá dimensão (n+1,), onde n é o número de features
     # e 1 é para o termo de bias (intercepto)
@@ -148,7 +148,7 @@ def main():
     print(f'\nPreço previsto (GD) para [1650,3]: ${price_gd:.2f}')
     """
     Resposta esperada:
-    Preço previsto (GD) para [1650,3]: $289221.55
+    Preço previsto (GD) para [1650,3]: $293081.46
     """
 
     # 6) Equação Normal
