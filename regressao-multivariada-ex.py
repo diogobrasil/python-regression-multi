@@ -109,7 +109,7 @@ def main():
     # e 1 é para o termo de bias (intercepto)
     # O vetor theta é inicializado com zeros, o que significa que inicialmente não temos informações sobre os parâmetros
     # do modelo
-    theta_gd = np.ones(X_b.shape[1])
+    theta_gd = np.zeros(X_b.shape[1])
 
     # Chame a função gradient_descent_multi para calcular os parâmetros θ usando o gradiente descendente
     # A função gradient_descent_multi retorna os parâmetros θ aprendidos e o histórico de custo J_history
