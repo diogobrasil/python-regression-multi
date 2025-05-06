@@ -168,11 +168,11 @@ Bônus extras serão concedidos pelo uso consistente dos *commit types* abaixo:
 ### Reconhecimentos e Direitos Autorais
 
 ```
-@autor:                [Seu Nome]
-@contato:              [Seu Email]
+@autor:                [Diogo Brasil Da Silva]
+@contato:              [diogobrasildasilva@gmail.com]
 @data última versão:   28/04/2025
 @versão:               2.0
-@outros repositórios:  [URLs opcionais]
+@outros repositórios:  [Regressão Linear](https://github.com/diogobrasil/python-regression)
 @Agradecimentos:       Universidade Federal do Maranhão (UFMA),
                        Prof. Dr. Thales Levi Azevedo Valente,
                        colegas de curso.
